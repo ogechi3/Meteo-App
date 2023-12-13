@@ -4,33 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meteo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <main>
-      <h1>Paris</h1>
-      <p>
-        Tuesday 14:49,scattered clouds
-        <br />
-        Humidity:66%,Wind:3.13m/h
-      </p>
-    </main>
-    <footer>
-      This page was coded by
-      <a href="https://github.com/ogechi3" target="_blank">Thomas Jennifer</a>
-      and is
-      <a href="https://github.com/ogechi3/Meteo-App" target="_blank"
-        >open sourced on Github</a
-      >
-      and
-      <a href="https://nature-guide-app.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
+    <div class="container">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-city-input"
+          />
+          <input type="submit" value="search" class="search-city-button" />
+        </form>
+      </header>
+      <main>
+        <h1 class="weather-city">Paris</h1>
+        <div class="weather-data">
+          <p class="weather-details">
+            Tuesday 14:49,scattered clouds
+            <br />
+            Humidity: <strong>66%</strong>,Wind: <strong>3.13m/h</strong>
+          </p>
+          <div class="weather-temperature-container">
+            <div class="weather-icon">☀️</div>
+            <div class="weather-temperature">23</div>
+            <div class="weather-unit">°C</div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        This page was coded by
+        <a href="https://github.com/ogechi3" target="_blank">Thomas Jennifer</a>
+        and is
+        <a href="https://github.com/ogechi3/Meteo-App" target="_blank"
+          >open sourced on Github</a
+        >
+        and
+        <a href="https://nature-guide-app.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
