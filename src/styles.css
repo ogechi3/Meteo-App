@@ -70,7 +70,8 @@ strong {
   font-size: 28px;
 }
 .weather-icon {
-  margin-top: 30px;
+  width: 88px;
+  line-height: 88px;
 }
 
 footer {
