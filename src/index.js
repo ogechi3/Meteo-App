@@ -51,8 +51,38 @@ function handleSearch(event) {
 
   searchCity(searchElement.value);
 }
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` 
+              <div class="weather-forecast-date">${day}
+              <div>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQBJREFUaN7t2csNwyAMBmBGYYSMwhgdgxEYjRW6ARu4HNyqB0CKednElf5b2/hLSALGAICRHKMABSjgUMDdD7xfLifkxByoJOJ33O3/nwHIhVgsKDWKriXhb+0WQD6wJxZegvhlADzrcUDhpeFlpwLyAa5BZ711Na4pgAXFNxFdABw2K4r/R9iRgLiw+N89MQSATxvYFN8F2DB0qkOJCggbi/8m9AASA0AiAXBuA0ziKIDACBAogMgIECkAYBUFKEABzwOIf4yKf5HJnkqIn8wxmk775y5oxC8pj1jUH9FWEd/YOqK1eERz94j2euFqUCF7NzjYbzHpLqUCFKCAJfkAq7RimK7qUtAAAAAASUVORK5CYII="
+                  class="forecast-icon"
+                />
+              </div>
+              <div class="weather-temperatures">
+                <div>
+                  <strong class="max-forecast-temperature">32°</strong>
+                  <span class="min-forecast-temperature">26°</span>
+                </div>
+              </div>
+              </div>
+          
+          `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
 
 let FormElement = document.querySelector("#form-input");
 FormElement.addEventListener("submit", handleSearch);
 
 searchCity("london");
+displayForecast();
