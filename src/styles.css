@@ -84,7 +84,7 @@ strong {
 }
 
 .forecast-icon {
-  font-size: 38px;
+  width: 100%;
   text-align: center;
 }
 
@@ -106,7 +106,7 @@ strong {
   justify-content: center;
 }
 .min-forecast-temperature {
-  opacity: 0.6;
+  color: #f65282;
 }
 
 footer {
